@@ -20,8 +20,8 @@ ckan.module('modal-contact', function($, _) {
             self.modal = null;
             self.messages = {
                 'onSuccess': _('Thank you for contacting us, and we will try and reply as soon ' +
-                    'as possible.<br />Unfortunately due to the number of enquiries the Museum ' +
-                    'receives, we cannot always reply in person to every one.'),
+                    'as possible.<br />Unfortunately due to the number of enquiries we ' +
+                    'receive, we cannot always reply in person to every one.'),
                 'onError': _('Sorry, there was an error sending the email. Please try again later.')
             };
             // define the template if it is not passed

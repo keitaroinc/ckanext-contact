@@ -11,16 +11,18 @@ from ckanext.contact.auth import send_contact
 from ckanext.contact import routes
 
 from ckan.plugins import SingletonPlugin, implements, interfaces, toolkit
+from ckan.lib.plugins import DefaultTranslation
 
 log = getLogger(__name__)
 
 
-class ContactPlugin(SingletonPlugin):
+class ContactPlugin(SingletonPlugin, DefaultTranslation):
     '''CKAN Contact Extension'''
     implements(interfaces.IBlueprint, inherit=True)
     implements(interfaces.IConfigurer)
     implements(interfaces.IAuthFunctions)
     implements(interfaces.ITemplateHelpers, inherit=True)
+    implements(interfaces.ITranslation)
 
     ## IConfigurer
     def update_config(self, config):
